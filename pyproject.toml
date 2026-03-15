@@ -1,18 +1,19 @@
 [project]
-name = "file-converter-mcp"
-version = "0.1.0"
-description = "A MCP server that provides file conversion tools"
+name = "file-ops"
+version = "0.2.0"
+description = "A local file operations skill: convert, inspect, archive, and extract text from files"
 authors = [
     { name = "wowyuarm", email = "wuyuang1007@gmail.com" }
 ]
 dependencies = [
-    "mcp[cli]",
-    "docx2pdf",
-    "pdf2docx",
     "pillow",
     "pandas",
+    "pdf2docx",
     "pdfkit",
     "markdown",
+    "openpyxl>=3.1.5",
+    "pymupdf",
+    "python-docx",
 ]
 requires-python = ">=3.10"
 

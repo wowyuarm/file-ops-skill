@@ -1,4 +1,4 @@
-name: Python Tests
+name: Skill Tests
 
 on:
   push:
@@ -25,9 +25,10 @@ jobs:
         version: "latest"
     - name: Install dependencies
       run: |
-        # Install dependencies using uv
+        # Install project dependencies for test runner
         uv sync
-        # Display installed packages
+        # Install skill-local venv for the script under test
+        bash skills/file-ops/scripts/setup.sh
         echo "Installed packages:"
         uv pip list
     - name: Lint with flake8
@@ -37,6 +38,6 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test dependencies
+    - name: Run tests
       run: |
-        uv run python test_dependencies.py 
+        uv run python -m unittest tests.test_file_ops
