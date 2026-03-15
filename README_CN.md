@@ -62,9 +62,3 @@ skills/file-ops/.venv/bin/python skills/file-ops/scripts/file_ops.py extract-tex
 ```
 
 转换时如不想输出到输入文件旁边，可加 `--output /路径/output.ext`。
-
-## 安装为 Skill
-
-```bash
-INSTALL_TO_CODEX=1 bash skills/file-ops/scripts/setup.sh
-```

@@ -62,9 +62,3 @@ skills/file-ops/.venv/bin/python skills/file-ops/scripts/file_ops.py extract-tex
 ```
 
 Use `--output /path/output.ext` with convert if you do not want the output written next to the input file.
-
-## Install As A Skill
-
-```bash
-INSTALL_TO_CODEX=1 bash skills/file-ops/scripts/setup.sh
-```
